@@ -23,10 +23,15 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('dashboard.index');
     })->name('dashboard');
 });
 
-
+Route::get('/laboratorista', function () {
+    return view('laboratorista.index');
+});
+Route::get('/laboratorista/create', function () {
+    return view('laboratorista.create');
+});
 Route::get('auth/facebook',[SocialController::class, 'redirectFacebook']);
 Route::get('auth/facebook/callback',[SocialController::class, 'callbackFacebook']);

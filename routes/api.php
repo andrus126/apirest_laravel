@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\LaboratoristaController;
-use App\Http\Controllers\Api\SocialController;
+//use App\Http\Controllers\Api\SocialController;
 
 Route::post('register', [UserController::class, 'register']);
 Route::post('login', [UserController::class, 'login']);
@@ -29,5 +29,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('auth/facebook',[SocialController::class, 'redirectFacebook']);
-Route::get('auth/facebook/callback',[SocialController::class, 'callbackFacebook']);
+//Route::get('auth/facebook',[SocialController::class, 'redirectFacebook']);
+//Route::get('auth/facebook/callback',[SocialController::class, 'callbackFacebook']);
